@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>TOPLANTILAR</h3>
+
+<table border="1">
+    <tr>
+        <td>Toplantı Konusu</td>
+        <td>Tarihi</td>
+        <td>Başlangıç Saati</td>
+        <td>Bitiş Saati</td>
+        <td>Katılımcılar</td>
+
+    </tr>
+    {% for row in rows %}
+    <tr>
+        <td>{{ row ["toplantiKonusu"]}}</td>
+        <td>{{ row ["tarih"]}}</td>
+        <td>{{ row ["baslangicSaati"]}}</td>
+        <td>{{ row ["bitisSaati"]}}</td>
+        <td>{{ row ["katilimcilar"]}}</td>
+        <td><a href="/viewMeetingInfo/{{ row["MeetingId"] }}" ><input type="button" value="Gönder"></td>
+    </tr>
+    {% endfor %}
+ <br> <br>
+</table>
+
+<a href="/">geri dönmek için tıklayın</a>
+</body>
+</html>

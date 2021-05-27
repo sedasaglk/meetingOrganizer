@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td>Toplantı Konusu</td>
+        <td>Tarihi</td>
+        <td>Başlangıç Saati</td>
+        <td>Bitiş Saati</td>
+        <td>Katılımcılar</td>
+
+    </tr>
+    {% for row in rows %}
+    <tr>
+
+        <td>{{ row ["toplantiKonusu"]}}</td>
+        <td>{{ row ["tarih"]}}</td>
+        <td>{{ row ["baslangicSaati"]}}</td>
+        <td>{{ row ["bitisSaati"]}}</td>
+        <td>{{ row ["katilimcilar"]}}</td>
+        <td> <a href="/updateMeetingInfo/{{ id }}"><input type="button" value="Güncelle"></a></td>
+        <td><a href="/deleteMeeting"><input type="button" value="Sil"></a></td>
+    </tr>
+    {% endfor %}
+    <br><br>
+</table>
+
+<br> <br>
+
+</body>
+</html>

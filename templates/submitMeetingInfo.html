@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <h2>TOPLANTI GÜNCELLE</h2>
+ <form action="/updatedetails/{{ id }}" method="post"></form>
+    <table>
+        <tr>
+            <td>Toplantı değişiklikleri </td>
+        </tr>
+        <tr>
+            <td>Toplantı Konusu <input type="text" name="title"></td>
+            <td>Toplantı Tarihi <input type="date" name="tarih"></td>
+            <td>Toplantı Başlangıç Saati <input type="time" name="stime"></td>
+            <td>Toplantı Bitiş Saati <input type="time" name="ftime"></td>
+            <td>Toplantı Katılımcıları <input type="text" name="katilimcilar"></td>
+        </tr>
+    </table>
+
+
+</body>
+</html>
